@@ -1,18 +1,9 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 /** 
+SQL NOTES
+---------
 
+SELECT, FROM, WHERE
+-------------------
 SELECT 
 customernumber,
 contactfirstname || ' ' || contactlastname AS "Full Name",
@@ -33,5 +24,18 @@ FROM customers
 ORDER BY contactfirstname DESC
 OFFSET 20 ROWS
 FETCH NEXT 10 ROWS ONLY;
+
+INNER JOINS
+-----------
+
+OUTER JOINS
+-----------
+
+LEFT OUTER JOIN
+---------------
+
+RIGHT OUTER JOIN
+----------------
+
 
 */
