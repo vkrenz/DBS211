@@ -37,5 +37,8 @@ LEFT OUTER JOIN
 RIGHT OUTER JOIN
 ----------------
 
+INVERSE OUTER JOIN
+------------------
+
 
 */
