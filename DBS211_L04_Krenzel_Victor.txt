@@ -25,7 +25,7 @@ WHERE UPPER(country) = 'FRANCE';
 -- 2. Create a query that displays all payments made by customers from Canada.
 --      a. Sort the output by Customer Number.
 --      b. Only display the Customer Number, Customer Name, Payment Date and Amount.
---      c. Make sure the date is displayed clearly to know what date it is. (i.e. what date is 02-04-19??? – Feb 4, 2019, April 2, 2019, April 19, 2002, ….)
+--      c. Make sure the date is displayed clearly to know what date it is. (i.e. what date is 02-04-19??? â€“ Feb 4, 2019, April 2, 2019, April 19, 2002, â€¦.)
 SELECT customernumber, customername, TO_CHAR (paymentdate, 'MON DD, YYYY') as paymentdate, amount
 FROM customers INNER JOIN payments USING (customernumber)
 WHERE UPPER(country) = 'CANADA'
@@ -71,7 +71,7 @@ CREATE VIEW vwEmployeeManager AS
     WHERE e.reportsto = m.employeenumber(+);
 
 -- 8. Modify the employee_manager view so the view returns only employee information for employees who have a manager. 
---    Do not DROP and recreate the view – modify it. (Google is your friend).
+--    Do not DROP and recreate the view â€“ modify it. (Google is your friend).
 CREATE OR REPLACE VIEW vwEmployeeManager AS
     SELECT e.*, m.firstname || ' ' || m.lastname AS manager
     FROM employees e, employees m
