@@ -12,30 +12,10 @@ SET AUTOCOMMIT ON;
 --    L5_ACTORS (actorid:int, name:varchar(20), lastname:varchar(30))
 --    L5_CASTINGS (movieid:int, actorid:int)
 --    L5_DIRECTORS(id:int, name:varchar(20), lastname:varchar(30))
-CREATE TABLE L5_movies ( 
-    mID         INT           PRIMARY KEY, 
-    title       VARCHAR(35)   NOT NULL, 
-    releaseYear INT           NOT NULL, 
-    director    INT           NOT NULL, 
-    score       DECIMAL(3, 2) 
-);
-
-CREATE TABLE L5_actors ( 
-    aID         INT           PRIMARY KEY, 
-    firstname   VARCHAR(20)   NOT NULL, 
-    lastname    VARCHAR(30)   NOT NULL 
-);
-
-CREATE TABLE L5_castings ( 
-    movieID     INT           PRIMARY KEY, 
-    actorID     INT 
-);
-
-CREATE TABLE L5_directors ( 
-    directorID  INT           PRIMARY KEY, 
-    firstname   VARCHAR(20)   NOT NULL, 
-    lastname    VARCHAR(30)   NOT NULL 
-);
+CREATE TABLE L5_movies ( mID INT PRIMARY KEY, title VARCHAR(35) NOT NULL, releaseYear INT NOT NULL, director INT NOT NULL, score DECIMAL(3, 2) );
+CREATE TABLE L5_actors ( aID INT PRIMARY KEY, firstname VARCHAR(20) NOT NULL, lastname VARCHAR(30) NOT NULL );
+CREATE TABLE L5_castings ( movieID INT PRIMARY KEY, actorID INT );
+CREATE TABLE L5_directors ( directorID INT PRIMARY KEY, firstname VARCHAR(20) NOT NULL, lastname VARCHAR(30) NOT NULL );
 
 -- 2. Modify the movies table to create a foreign key constraint that refers to table directors.
 ALTER TABLE L5_movies 
