@@ -80,7 +80,7 @@ SET
 WHERE
    employeenumber = 1002;
 
--- 11. In table employee2, generate the email address for column username for each student by concatenating the first character of employee’s first name and the employee’s last name. 
+-- 11. In table employee2, generate the email address for column username for each student by concatenating the first character of employeeâ€™s first name and the employeeâ€™s last name. 
 --     For instance, the username of employee Peter Stone will be pstone. 
 --     NOTE: the username is in all lower case letters. 
 UPDATE employee2
